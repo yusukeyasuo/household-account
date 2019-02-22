@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   root "home#index"
   get "home/index" => "home#index"
   get "home/show/:id" => "home#show"
-  get "household/index" => "household#index"
-  get "budget/index" => "budget#index"
-  get "asset/index" => "asset#index"
-  get "profit/index" => "profit#index"
+  get "household" => "household#index"
+  get "budget" => "budget#index"
+  get "asset" => "asset#index"
+  get "profit" => "profit#index"
+  
+  get "login" => "users#login_form"
+  post "login" => "users#login"
+  
+  get "signup" => "users#new"
 end

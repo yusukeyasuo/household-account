@@ -24,14 +24,14 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">PDCA<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">家計管理</a>
-          <a class="nav-item nav-link" href="#">予算管理</a>
-          <a class="nav-item nav-link" href="#">収支管理</a>
-          <a class="nav-item nav-link" href="#">資産管理</a>
+          <a class="nav-item nav-link <%= (controller.controller_name == 'pdca')? 'active' : '' %>" href="#">PDCA</span></a>
+          <a class="nav-item nav-link <%= (controller.controller_name == 'household')? 'active' : '' %>" href="/household">家計管理</a>
+          <a class="nav-item nav-link <%= (controller.controller_name == 'budget')? 'active' : '' %>" href="/budget">予算管理</a>
+          <a class="nav-item nav-link <%= (controller.controller_name == 'profit')? 'active' : '' %>" href="/profit">収支管理</a>
+          <a class="nav-item nav-link <%= (controller.controller_name == 'asset')? 'active' : '' %>" href="/asset">資産管理</a>
           <a class="nav-item nav-link" href="#">CASH FLOW</a>
           <a class="nav-item nav-link" href="#">設定</a>
-          <a class="nav-item nav-link" href="#">ログイン</a>
+          <a class="nav-item nav-link" href="https://a7395d54b4ab4ae0a98bcca87d1ce9bb.vfs.cloud9.us-east-2.amazonaws.com/login">ログイン</a>
         </div>
       </div>
     </nav>
