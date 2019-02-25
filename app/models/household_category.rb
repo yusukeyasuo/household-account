@@ -1,0 +1,2 @@
+class HouseholdCategory < ApplicationRecord
+end

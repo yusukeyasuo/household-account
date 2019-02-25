@@ -31,7 +31,13 @@
           <a class="nav-item nav-link <%= (controller.controller_name == 'asset')? 'active' : '' %>" href="/asset">資産管理</a>
           <a class="nav-item nav-link" href="#">CASH FLOW</a>
           <a class="nav-item nav-link" href="#">設定</a>
-          <a class="nav-item nav-link" href="https://a7395d54b4ab4ae0a98bcca87d1ce9bb.vfs.cloud9.us-east-2.amazonaws.com/login">ログイン</a>
+          <% if user_signed_in? %>
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'nav-item nav-link' %> <!-- ログアウトをする -->
+          <% else %>
+            <!-- ユーザーがログインしていなかった時の処理 -->
+            <%= link_to "ログイン", new_user_session_path, class: 'post nav-item nav-link' %> <!-- ログイン画面に移行する -->
+            <%= link_to "新規登録", new_user_registration_path, class: 'post nav-item nav-link' %> <!-- 新規登録画面に移行する -->
+          <% end %>
         </div>
       </div>
     </nav>

@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  year: MyString
+  month: MyString
+  day: MyString
+  payment: MyString
+  result: MyString
+  sum_credit: MyString
+  check_out: MyString
+  detail: MyString
+  analysis: MyString
+  client: MyString
+  content: MyString
+
+two:
+  user_id: MyString
+  year: MyString
+  month: MyString
+  day: MyString
+  payment: MyString
+  result: MyString
+  sum_credit: MyString
+  check_out: MyString
+  detail: MyString
+  analysis: MyString
+  client: MyString
+  content: MyString
