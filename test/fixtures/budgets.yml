@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 
+  category: 
+  sub_category1: 
+  sub_category2: 
+  budget: 
+  budget_month_on_month: 
+  result_month_on_month: 
+  budget_year_on_year: 
+  result_year_on_year: 
+
+two:
+  user_id: 
+  category: 
+  sub_category1: 
+  sub_category2: 
+  budget: 
+  budget_month_on_month: 
+  result_month_on_month: 
+  budget_year_on_year: 
+  result_year_on_year: 

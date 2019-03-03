@@ -16,6 +16,22 @@
     </tr>
   </thead>
   <tbody>
+    <% @households.each do |h| %>
+      <tr>
+        <th scope="row"><%= h.id %></th>
+        <td><%= h.day %></td>
+        <td>変動費</td>
+        <td>食費</td>
+        <td>外食</td>
+        <td>329円</td>
+        <td><%= h.payment %></td>
+        <td>支払</td>
+        <td>−</td>
+        <td>Wants</td>
+        <td>牛角</td>
+        <td>ディナー</td>
+      </tr>
+    <% end %>
     <tr>
       <th scope="row">1</th>
       <td>1日</td>

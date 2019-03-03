@@ -10,12 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_01_133843) do
+ActiveRecord::Schema.define(version: 2019_03_03_234334) do
 
   create_table "assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "user_id"
     t.string "asset_type"
     t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "budgets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_id"
+    t.string "category"
+    t.string "sub_category1"
+    t.string "sub_category2"
+    t.string "budget"
+    t.string "budget_month_on_month"
+    t.string "result_month_on_month"
+    t.string "budget_year_on_year"
+    t.string "result_year_on_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,6 +66,18 @@ ActiveRecord::Schema.define(version: 2019_03_01_133843) do
     t.string "last_name"
     t.string "first_name"
     t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "user_id"
+    t.string "category"
+    t.string "sub_category1"
+    t.string "sub_category2"
+    t.string "year_2019_01"
+    t.string "year_2019_02"
+    t.string "year_2019_03"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
