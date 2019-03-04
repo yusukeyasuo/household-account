@@ -19,9 +19,10 @@
         </tr>
       </thead>
       <tbody>
+        <% @budgets.each do |h| %>
         <tr>
-          <th scope="row">1</th>
-          <td>収入</td>
+          <th scope="row"><%= h.id %></th>
+          <td><%= h.user_id %></td>
           <td>本業</td>
           <td>給与</td>
           <td>350,000円</td>
@@ -30,6 +31,7 @@
           <td>350,000円</td>
           <td>344,200円</td>
         </tr>
+        <% end %>
         <tr>
           <th scope="row">2</th>
           <td>収入</td>
