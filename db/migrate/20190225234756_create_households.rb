@@ -1,16 +1,17 @@
 class CreateHouseholds < ActiveRecord::Migration[5.2]
   def change
     create_table :households do |t|
-      t.string :user_id
-      t.string :year
-      t.string :month
-      t.string :day
-      t.string :payment
-      t.string :result
-      t.string :sum_credit
-      t.string :check_out
-      t.string :detail
-      t.string :analysis
+      t.references :user, index: true
+      t.date :entry_date
+      t.integer :category
+      t.integer :sub_category1
+      t.integer :sub_category2
+      t.integer :payment
+      t.integer :result
+      t.integer :sum_credit
+      t.integer :check_out
+      t.integer :detail
+      t.integer :analysis
       t.string :client
       t.string :content
 

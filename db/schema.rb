@@ -44,30 +44,22 @@ ActiveRecord::Schema.define(version: 2019_03_03_234334) do
   end
 
   create_table "households", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.string "year"
-    t.string "month"
-    t.string "day"
-    t.string "payment"
-    t.string "result"
-    t.string "sum_credit"
-    t.string "check_out"
-    t.string "detail"
-    t.string "analysis"
+    t.bigint "user_id"
+    t.date "entry_date"
+    t.integer "category"
+    t.integer "sub_category1"
+    t.integer "sub_category2"
+    t.integer "payment"
+    t.integer "result"
+    t.integer "sum_credit"
+    t.integer "check_out"
+    t.integer "detail"
+    t.integer "analysis"
     t.string "client"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "members", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "mail"
-    t.string "password"
-    t.string "last_name"
-    t.string "first_name"
-    t.string "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_households_on_user_id"
   end
 
   create_table "profits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|

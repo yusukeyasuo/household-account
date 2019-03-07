@@ -1,0 +1,11 @@
+ja:
+  enums:
+    household:
+      payment:
+        cash: 現金
+        bank_account: 銀行口座
+        credit: クレジットカード
+        debit: デビットカード
+        gift_card: ギフト券
+        point: ポイント
+        others: その他

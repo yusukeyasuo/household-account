@@ -6,8 +6,9 @@
       <th scope="col">大項目</th>
       <th scope="col">中項目</th>
       <th scope="col">小項目</th>
-      <th scope="col">実績</th>
       <th scope="col">支払方法</th>
+      <th scope="col">実績</th>
+      <th scope="col">C合計</th>
       <th scope="col">精算</th>
       <th scope="col">明細</th>
       <th scope="col">分析</th>
@@ -19,158 +20,19 @@
     <% @households.each do |h| %>
       <tr>
         <th scope="row"><%= h.id %></th>
-        <td><%= h.day %></td>
-        <td>変動費</td>
-        <td>食費</td>
-        <td>外食</td>
-        <td>329円</td>
+        <td><%= h.entry_date %></td>
+        <td><%= h.category %></td>
+        <td><%= h.sub_category1 %></td>
+        <td><%= h.sub_category2 %></td>
         <td><%= h.payment %></td>
-        <td>支払</td>
-        <td>−</td>
-        <td>Wants</td>
-        <td>牛角</td>
-        <td>ディナー</td>
+        <td><%= number_to_currency(h.result, :unit => "¥",:precision => 0) %></td>
+        <td><%= number_to_currency(h.sum_credit, :unit => "¥", :precision => 0) %></td>
+        <td><%= h.check_out %></td>
+        <td><%= h.detail %></td>
+        <td><%= h.analysis %></td>
+        <td><%= h.client %></td>
+        <td><%= h.content %></td>
       </tr>
     <% end %>
-    <tr>
-      <th scope="row">1</th>
-      <td>1日</td>
-      <td>変動費</td>
-      <td>食費</td>
-      <td>外食</td>
-      <td>329円</td>
-      <td>現金</td>
-      <td>支払</td>
-      <td>−</td>
-      <td>Wants</td>
-      <td>牛角</td>
-      <td>ディナー</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>1日</td>
-      <td>貯蓄</td>
-      <td>投資積立</td>
-      <td>iDeco</td>
-      <td>12,000円</td>
-      <td>銀行口座</td>
-      <td>支払</td>
-      <td>未確認</td>   
-      <td>Needs</td>
-      <td>楽天証券</td>
-      <td>iDeco</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>3日</td>
-      <td>収入</td>
-      <td>副業</td>
-      <td>アフィリエイト</td>
-      <td>8,000円</td>
-      <td>銀行口座</td>
-      <td>受取</td>
-      <td>未確認</td>
-      <td>−</td>
-      <td>バリューコマース</td>
-      <td>アフィリエイト</td>
-    </tr>
-   <tr>
-      <th scope="row">4</th>
-      <td>4日</td>
-      <td>特別支出</td>
-      <td>特別支出</td>
-      <td>特別支出計画</td>
-      <td>2,500円</td>
-      <td>デビット</td>
-      <td>支払</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>イオンスーパー</td>
-      <td>誕生日</td>
-    </tr>
-   <tr>
-      <th scope="row">5</th>
-      <td>6日</td>
-      <td>固定費</td>
-      <td>公共料金</td>
-      <td>電気</td>
-      <td>10,800円</td>
-      <td>クレジット</td>
-      <td>支払</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>エルピオでんき</td>
-      <td>電気</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>7日</td>
-      <td>固定費</td>
-      <td>公共料金</td>
-      <td>ガス</td>
-      <td>9,823円</td>
-      <td>クレジット</td>
-      <td>支払い</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>東彩ガス</td>
-      <td>ガス</td>
-    </tr>
-    <tr>
-      <th scope="row">7</th>
-      <td>7日</td>
-      <td>固定費</td>
-      <td>ローン</td>
-      <td>フラット35s</td>
-      <td>97,882円</td>
-      <td>銀行口座</td>
-      <td>支払い</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>住宅金融支援機構</td></td>
-      <td>フラット35s</td>
-    </tr>
-    <tr>
-      <th scope="row">8</th>
-      <td>8日</td>
-      <td>変動費</td>
-      <td>生活費</td>
-      <td>医療関連</td>
-      <td>5,422円</td>
-      <td>現金</td>
-      <td>支払</td>
-      <td>−</td>
-      <td>Needs</td>
-      <td>獨協大学</td>
-      <td>治療費</td>
-    </tr>
-<tr>
-      <th scope="row">9</th>
-      <td>11日</td>
-      <td>変動費</td>
-      <td>生活費</td>
-      <td>教育関連</td>
-      <td>1,655円</td>
-      <td>デビット</td>
-      <td>支払</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>ベネッセコーポレーション</td>
-      <td>こどもちゃれんじ</td>
-    </tr>
-    <tr>
-      <th scope="row">10</th>
-      <td>14日</td>
-      <td>副業支出</td>
-      <td>副業支出</td>
-      <td>副業支出</td>
-      <td>2,322円</td>
-      <td>クレジット</td>
-      <td>支払</td>
-      <td>未確認</td>
-      <td>Needs</td>
-      <td>クラウドワークス</td>
-      <td>外注費</td>
-    </tr>
   </tbody>
 </table>
