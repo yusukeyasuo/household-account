@@ -20,117 +20,18 @@
       </thead>
       <tbody>
         <% @budgets.each do |h| %>
-        <tr>
-          <th scope="row"><%= h.id %></th>
-          <td><%= h.user_id %></td>
-          <td>本業</td>
-          <td>給与</td>
-          <td>350,000円</td>
-          <td>350,000円</td>
-          <td>351,200円</td>
-          <td>350,000円</td>
-          <td>344,200円</td>
-        </tr>
+          <tr>
+            <th scope="row"><%= h.id %></th>
+              <td><%= h.category %></td>
+              <td><%= h.sub_category1 %></td>
+              <td><%= h.sub_category2 %></td>
+              <td><%= h.budget %></td>
+              <td><%= h.budget_month_on_month %></td>
+              <td><%= h.result_month_on_month %></td>
+              <td><%= h.budget_year_on_year %></td>
+              <td><%= h.result_year_on_year %></td>
+          </tr>
         <% end %>
-        <tr>
-          <th scope="row">2</th>
-          <td>収入</td>
-          <td>本業</td>
-          <td>賞与</td>
-          <td>800,000円</td>
-          <td>0円</td>
-          <td>0円</td>
-          <td>800,000円</td>
-          <td>662,000円</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>収入</td>
-          <td>副業</td>
-          <td>アフィリエイト</td>
-          <td>120,000円</td>
-          <td>8,000円</td>
-          <td>7,688円</td>
-          <td>12,000円</td>
-          <td>6,626円</td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>収入</td>
-          <td>投資</td>
-          <td>株式投資</td>
-          <td>2,000円</td>
-          <td>1,000円</td>
-          <td>0円</td>
-          <td>2,000円</td>
-          <td>4,244円</td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>貯蓄</td>
-          <td>貯金</td>
-          <td>貯金</td>
-          <td>20,000円</td>
-          <td>20,000円</td>
-          <td>20,000円</td>
-          <td>20,000円</td>
-          <td>20,000円</td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>貯蓄</td>
-          <td>特別支出積立</td>
-          <td>特別支出積立</td>
-          <td>30,000円</td>
-          <td>30,000円</td>
-          <td>30,000円</td>
-          <td>30,000円</td>
-          <td>30,000円</td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>貯蓄</td>
-          <td>投資積立</td>
-          <td>iDeco</td>
-          <td>12,000円</td>
-          <td>12,000円</td>
-          <td>12,000円</td>
-          <td>12,000円</td>
-          <td>12,000円</td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>特別支出</td>
-          <td>特別支出</td>
-          <td>特別支出計画</td>
-          <td>1,000円</td>
-          <td>8,000円</td>
-          <td>9,928円</td>
-          <td>10,000円</td>
-          <td>9,929円</td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>固定費</td>
-          <td>公共料金</td>
-          <td>電気</td>
-          <td>11,000円</td>
-          <td>10,000円</td>
-          <td>9,888円</td>
-          <td>11,000円</td>
-          <td>14,422円</td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>固定費</td>
-          <td>公共料金</td>
-          <td>ガス</td>
-          <td>8,000円</td>
-          <td>9,000円</td>
-          <td>12,122円</td>
-          <td>8,000円</td>
-          <td>9,890円</td>
-        </tr>
       </tbody>
     </table>    
   </body>

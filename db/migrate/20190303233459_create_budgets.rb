@@ -1,15 +1,15 @@
 class CreateBudgets < ActiveRecord::Migration[5.2]
   def change
     create_table :budgets do |t|
-      t.string :user_id
-      t.string :category
-      t.string :sub_category1
-      t.string :sub_category2
-      t.string :budget
-      t.string :budget_month_on_month
-      t.string :result_month_on_month
-      t.string :budget_year_on_year
-      t.string :result_year_on_year
+      t.integer :user_id
+      t.integer:category
+      t.integer :sub_category1
+      t.integer :sub_category2
+      t.integer :budget
+      t.integer :budget_month_on_month
+      t.integer :result_month_on_month
+      t.integer :budget_year_on_year
+      t.integer :result_year_on_year
 
       t.timestamps
     end

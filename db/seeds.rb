@@ -1,4 +1,5 @@
 require "csv"
+
 CSV.foreach('db/initial_household.csv') do |row|
   Household.create(
     :user_id => row[0], 
@@ -14,4 +15,17 @@ CSV.foreach('db/initial_household.csv') do |row|
     :analysis => row[10], 
     :client => row[11], 
     :content => row[12])
+end
+
+CSV.foreach('db/initial_budget.csv') do |row|
+  Budget.create(
+    :user_id => row[0], 
+    :category => row[1],
+    :sub_category1 => row[2],
+    :sub_category2 => row[3],
+    :budget => row[4], 
+    :budget_month_on_month => row[5], 
+    :result_month_on_month => row[6], 
+    :budget_year_on_year => row[7], 
+    :result_year_on_year => row[8],)
 end
