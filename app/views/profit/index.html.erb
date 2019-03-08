@@ -18,116 +18,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>収入</td>
-          <td>本業</td>
-          <td>給与</td>
-          <td>352,000円</td>
-          <td>352,000円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>収入</td>
-          <td>本業</td>
-          <td>賞与</td>
-          <td>786,2000円</td>
-          <td>0円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>収入</td>
-          <td>副業</td>
-          <td>アフィリエイト</td>
-          <td>7,688円</td>
-          <td>6,221円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>収入</td>
-          <td>投資</td>
-          <td>株式投資</td>
-          <td>0円</td>
-          <td>0円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>貯蓄</td>
-          <td>貯金</td>
-          <td>貯金</td>
-          <td>20,000円</td>
-          <td>20,000円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>貯蓄</td>
-          <td>特別支出積立</td>
-          <td>特別支出積立</td>
-          <td>30,000円</td>
-          <td>30,000円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>貯蓄</td>
-          <td>投資積立</td>
-          <td>iDeco</td>
-          <td>12,000円</td>
-          <td>12,000円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>固定費</td>
-          <td>公共料金</td>
-          <td>電気</td>
-          <td>11,000円</td>
-          <td>10,800円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>固定費</td>
-          <td>公共料金</td>
-          <td>ガス</td>
-          <td>9,888円</td>
-          <td>9,823円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>変動費</td>
-          <td>食費</td>
-          <td>外食</td>
-          <td>4,244円</td>
-          <td>6,254円</td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td>合計</td>
-          <td></td>
-          <td></td>
-          <td>1,058,756円</td>
-          <td>269,3円</td>
-          <td></td>
-          <td></td>
-        </tr>
+        <% @profits.each do |h| %>
+          <tr>
+            <th scope="row"><%= h.id %></th>
+              <td><%= h.category %></td>
+              <td><%= h.sub_category1 %></td>
+              <td><%= h.sub_category2 %></td>
+              <td><%= h.year_2019_01 %></td>
+              <td><%= h.year_2019_02 %></td>
+              <td><%= h.year_2019_03 %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>    
   </body>

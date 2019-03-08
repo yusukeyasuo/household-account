@@ -27,5 +27,16 @@ CSV.foreach('db/initial_budget.csv') do |row|
     :budget_month_on_month => row[5], 
     :result_month_on_month => row[6], 
     :budget_year_on_year => row[7], 
-    :result_year_on_year => row[8],)
+    :result_year_on_year => row[8])
+end
+
+CSV.foreach('db/initial_profit.csv') do |row|
+  Profit.create(
+    :user_id => row[0], 
+    :category => row[1],
+    :sub_category1 => row[2],
+    :sub_category2 => row[3],
+    :year_2019_01 => row[4], 
+    :year_2019_02 => row[5], 
+    :year_2019_03 => row[6])
 end
