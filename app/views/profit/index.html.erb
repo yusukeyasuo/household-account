@@ -14,7 +14,6 @@
           <th scope="col">2019年1月</th>
           <th scope="col">2019年2月</th>
           <th scope="col">2019年3月</th>
-          <th scope="col">2019年4月</th>
         </tr>
       </thead>
       <tbody>
@@ -24,9 +23,9 @@
               <td><%= h.category %></td>
               <td><%= h.sub_category1 %></td>
               <td><%= h.sub_category2 %></td>
-              <td><%= h.year_2019_01 %></td>
-              <td><%= h.year_2019_02 %></td>
-              <td><%= h.year_2019_03 %></td>
+              <td><%= number_to_currency(h.year_2019_01, :unit => "¥",:precision => 0) %></td>
+              <td><%= number_to_currency(h.year_2019_02, :unit => "¥",:precision => 0) %></td>
+              <td><%= number_to_currency(h.year_2019_03, :unit => "¥",:precision => 0) %></td>
           </tr>
         <% end %>
       </tbody>

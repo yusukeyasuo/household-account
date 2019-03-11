@@ -8,126 +8,18 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">大項目</th>
-          <th scope="col">中項目</th>
-          <th scope="col">小項目</th>
-          <th scope="col">備考</th>
-          <th scope="col">2019年1月</th>
-          <th scope="col">2019年2月</th>
-          <th scope="col">2019年3月</th>
+          <th scope="col">資産種類</th>
+          <th scope="col">資産名称</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>流動資産</td>
-          <td>現金</td>
-          <td>現金</td>
-          <td></td>
-          <td>1,211円</td>
-          <td>202円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>流動資産</td>
-          <td>銀行</td>
-          <td>住信SBIネット銀行</td>
-          <td>支払専用口座</td>
-          <td>786,200円</td>
-          <td>842,952円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>流動資産</td>
-          <td>証券</td>
-          <td>楽天証券</td>
-          <td>投資信託</td>
-          <td>9,542円</td>
-          <td>9,772円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">4</th>
-          <td>流動資産</td>
-          <td>確定拠出年金</td>
-          <td>楽天証券</td>
-          <td>iDeco</td>
-          <td>132,242円</td>
-          <td>144,556円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">5</th>
-          <td>固定資産</td>
-          <td>保険</td>
-          <td>プルデンシャル生命保険</td>
-          <td></td>
-          <td>1,131,737円</td>
-          <td>1,131,737円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">6</th>
-          <td>流動負債</td>
-          <td>クレジットカード</td>
-          <td>ビューカード</td>
-          <td></td>
-          <td>17,145円</td>
-          <td>9,822円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">7</th>
-          <td>流動負債</td>
-          <td>クレジットカード</td>
-          <td>イオンカード</td>
-          <td></td>
-          <td>48,749円</td>
-          <td>74,618円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">8</th>
-          <td>流動負債</td>
-          <td>クレジットカード</td>
-          <td>楽天カード</td>
-          <td></td>
-          <td>28,374円</td>
-          <td>72,829円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">9</th>
-          <td>固定負債</td>
-          <td>住宅ローン</td>
-          <td>フラット35s</td>
-          <td></td>
-          <td>33,547,333円</td>
-          <td>33,478,171</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">10</th>
-          <td>固定負債</td>
-          <td>住宅ローン</td>
-          <td>優良住宅</td>
-          <td></td>
-          <td>5,622,238円</td>
-          <td>5,617,283円</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">11</th>
-          <td>合計</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td>-37,202,907円</td>
-          <td>-37,123,504円</td>
-          <td></td>
-        </tr>
+         <% @assets.each do |h| %>
+          <tr>
+            <th scope="row"><%= h.id %></th>
+              <td><%= h.asset_type %></td>
+              <td><%= h.name %></td>
+          </tr>
+        <% end %>
       </tbody>
     </table>    
   </body>

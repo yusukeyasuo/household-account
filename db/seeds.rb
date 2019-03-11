@@ -40,3 +40,10 @@ CSV.foreach('db/initial_profit.csv') do |row|
     :year_2019_02 => row[5], 
     :year_2019_03 => row[6])
 end
+
+CSV.foreach('db/initial_asset.csv') do |row|
+  Asset.create(
+    :user_id => row[0], 
+    :asset_type => row[1],
+    :name => row[2])
+end

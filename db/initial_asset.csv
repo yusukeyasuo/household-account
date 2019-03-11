@@ -1,5 +1,5 @@
-1,1,SBI証券
-1,1,楽天証券
-1,2,確定拠出年金
-1,3,楽天カード
-1,4,住宅ローン
+1,current_asset,SBI証券
+1,current_asset,楽天証券
+1,fixed_asset,確定拠出年金
+1,current_liability,楽天カード
+1,fixed_liability,住宅ローン
