@@ -13,32 +13,32 @@
 ActiveRecord::Schema.define(version: 2019_03_03_234334) do
 
   create_table "assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.string "asset_type"
+    t.integer "user_id"
+    t.integer "asset_type"
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "budgets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.string "category"
-    t.string "sub_category1"
-    t.string "sub_category2"
-    t.string "budget"
-    t.string "budget_month_on_month"
-    t.string "result_month_on_month"
-    t.string "budget_year_on_year"
-    t.string "result_year_on_year"
+    t.integer "user_id"
+    t.integer "category"
+    t.integer "sub_category1"
+    t.integer "sub_category2"
+    t.integer "budget"
+    t.integer "budget_month_on_month"
+    t.integer "result_month_on_month"
+    t.integer "budget_year_on_year"
+    t.integer "result_year_on_year"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "household_categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.string "category"
-    t.string "sub_category1"
-    t.string "sub_category2"
+    t.integer "user_id"
+    t.integer "category"
+    t.integer "sub_category1"
+    t.integer "sub_category2"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -63,13 +63,13 @@ ActiveRecord::Schema.define(version: 2019_03_03_234334) do
   end
 
   create_table "profits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.string "category"
-    t.string "sub_category1"
-    t.string "sub_category2"
-    t.string "year_2019_01"
-    t.string "year_2019_02"
-    t.string "year_2019_03"
+    t.integer "user_id"
+    t.integer "category"
+    t.integer "sub_category1"
+    t.integer "sub_category2"
+    t.integer "year_2019_01"
+    t.integer "year_2019_02"
+    t.integer "year_2019_03"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
