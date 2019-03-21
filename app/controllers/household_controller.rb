@@ -1,11 +1,10 @@
 class HouseholdController < ApplicationController
   before_action :require_login
   before_action :set_household, only: [:edit, :update, :destroy]
+  before_action :set_categories
   
   def index
     @households = Household.where(user_id: current_user.id)
-    categories = Category.all.select(:id, :name)
-    @categories = Hash[categories.map{|category| [category.id, category.name]}]
   end
   
   def new
@@ -36,6 +35,11 @@ class HouseholdController < ApplicationController
     def set_household
       @household = Household.find_by(id: params[:id])
       redirect_to :household_index_path and return unless @household
+    end
+    
+    def set_categories
+      categories = Category.all.select(:id, :name)
+      @categories = Hash[categories.map{|category| [category.id, category.name]}]
     end
     
     def household_params
