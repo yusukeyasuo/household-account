@@ -47,3 +47,12 @@ CSV.foreach('db/initial_asset.csv') do |row|
     :asset_type => row[1],
     :name => row[2])
 end
+
+CSV.foreach('db/initial_category.csv') do |row|
+  unless Category.find_by(id: row[0])
+    Category.create(
+      id: row[0],
+      name: row[1]
+      )
+  end
+end

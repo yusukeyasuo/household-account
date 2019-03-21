@@ -4,6 +4,8 @@ class HouseholdController < ApplicationController
   
   def index
     @households = Household.where(user_id: current_user.id)
+    categories = Category.all.select(:id, :name)
+    @categories = Hash[categories.map{|category| [category.id, category.name]}]
   end
   
   def new
