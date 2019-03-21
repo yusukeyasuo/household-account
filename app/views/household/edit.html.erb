@@ -1,5 +1,5 @@
 <div class="container">
-  <%= form_with model: @household, url: household_index_path do |form| %>
+  <%= form_with model: @household do |form| %>
     <div class="form-group">
       <%= form.label :entry_date %>
       <%= form.date_field :entry_date, class: "form-control"%>
