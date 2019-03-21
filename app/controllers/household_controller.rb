@@ -1,6 +1,6 @@
 class HouseholdController < ApplicationController
   before_action :require_login
-  before_action :set_household, only: [:edit, :update]
+  before_action :set_household, only: [:edit, :update, :destroy]
   
   def index
     @households = Household.where(user_id: current_user.id)
@@ -22,6 +22,11 @@ class HouseholdController < ApplicationController
   
   def update
     @household.update(household_params)
+    redirect_to action: :index and return
+  end
+  
+  def destroy
+    @household.destroy
     redirect_to action: :index and return
   end
   
