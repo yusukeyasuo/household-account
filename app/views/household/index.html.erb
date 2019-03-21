@@ -15,6 +15,7 @@
       <th scope="col">分析</th>
       <th scope="col">取引先</th>
       <th scope="col">内容</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -26,10 +27,10 @@
           <% end %>
         </th>
         <td><%= h.entry_date %></td>
-        <td><%= h.category %></td>
+        <td><%= @categories[h.category] %></td>
         <td><%= h.sub_category1 %></td>
         <td><%= h.sub_category2 %></td>
-        <td><%= h.payment %></td>
+        <td><%= h.payment_i18n %></td>
         <td><%= number_to_currency(h.result, :unit => "¥",:precision => 0) %></td>
         <td><%= number_to_currency(h.sum_credit, :unit => "¥", :precision => 0) %></td>
         <td><%= h.check_out %></td>
@@ -37,6 +38,9 @@
         <td><%= h.analysis %></td>
         <td><%= h.client %></td>
         <td><%= h.content %></td>
+        <td>
+          <%= link_to '削除', household_path(h), method: :delete, data: { confirm: '本当に削除しますか？' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
